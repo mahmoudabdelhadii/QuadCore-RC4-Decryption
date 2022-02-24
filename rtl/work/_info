@@ -1,0 +1,304 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/16.1
+vClock_divider
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1616319697
+!i10b 1
+!s100 1MOLMH?XKn2`0cRh:zZ?I1
+I@4>zPJ?:cgFJIUCaBoXjD0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Clock_divider_sv_unit
+S1
+Z3 dC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc
+w1614486637
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Clock_divider.sv
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Clock_divider.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1616319697.000000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Clock_divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Clock_divider.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@clock_divider
+vCore
+R0
+R1
+!i10b 1
+!s100 X118`ncNlBI0hljQ2cF1Y1
+IX12z3AcRh?G24DE:=Q6<n1
+R2
+!s105 Core_sv_unit
+S1
+R3
+w1616300663
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Core.sv
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Core.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Core.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Core.sv|
+!i113 1
+R6
+R7
+n@core
+vd_memory
+R1
+!i10b 1
+!s100 PH3SYOTghl4al<TSdJNk_0
+I6Xgg]_D?BGh2O:Y>VGSCT0
+R2
+R3
+w1616317728
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/d_memory.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/d_memory.v
+Z8 L0 40
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/d_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/d_memory.v|
+!i113 1
+Z9 o-work work
+R7
+vdoublesync
+Z10 !s110 1616314765
+!i10b 1
+!s100 h[h?dcIHcN;P79NdP34S[0
+IaU@<NWYceT>NT>j9U0dn71
+Z11 V`JN@9S9cnhjKRR_L]QIcM3
+R3
+w1612686669
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/doublesync.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/doublesync.v
+L0 1
+Z12 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1616314765.638000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/doublesync.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/doublesync.v|
+!i113 1
+R9
+ve_memory
+R1
+!i10b 1
+!s100 >_[BWjiWOIeJ]RKnX:K>D0
+Ie51`VEJFo4OkZldKAQKOP0
+R2
+R3
+w1616317739
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/e_memory.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/e_memory.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/e_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/e_memory.v|
+!i113 1
+R9
+R7
+vGenerate_Arbitrary_Divided_Clk32
+R10
+!i10b 1
+!s100 8=iGlzck0b@NKb_VFN7YH2
+IYlSkomfm^ZY]^mkMATaBF3
+R11
+R3
+w1612686670
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Generate_Arbitrary_Divided_Clk32.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Generate_Arbitrary_Divided_Clk32.v
+L0 2
+R12
+r1
+!s85 0
+31
+!s108 1616314765.904000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Generate_Arbitrary_Divided_Clk32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/Generate_Arbitrary_Divided_Clk32.v|
+!i113 1
+R9
+n@generate_@arbitrary_@divided_@clk32
+vLCD_Scope_Encapsulated_pacoblaze_wrapper
+Z13 !s110 1616314766
+!i10b 1
+!s100 FoFm9Xbm^6EPmFgPLScoo1
+IE2Xkf>BzM1ClzV=4GNG7I0
+R11
+R3
+w1612686671
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/LCD_Scope_Encapsulated_pacoblaze_wrapper.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/LCD_Scope_Encapsulated_pacoblaze_wrapper.v
+L0 1
+R12
+r1
+!s85 0
+31
+!s108 1616314766.279000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/LCD_Scope_Encapsulated_pacoblaze_wrapper.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/LCD_Scope_Encapsulated_pacoblaze_wrapper.v|
+!i113 1
+R9
+n@l@c@d_@scope_@encapsulated_pacoblaze_wrapper
+vs_memory
+R1
+!i10b 1
+!s100 BjRR>bb68YbUSj33Bj_^]0
+IoQ7?J8RffNod`9m^86EOe2
+R2
+R3
+w1616317753
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/s_memory.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/s_memory.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/s_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/s_memory.v|
+!i113 1
+R9
+R7
+vSevenSegmentDisplayDecoder
+Z14 !s110 1616319698
+!i10b 1
+!s100 04cdEA1ld]g_`l4zO2j1S0
+Ia?3FPYTgXZzOV3B0oBGSE2
+R2
+R3
+w1615762444
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SevenSegmentDisplayDecoder.v
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SevenSegmentDisplayDecoder.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1616319698.000000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SevenSegmentDisplayDecoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SevenSegmentDisplayDecoder.v|
+!i113 1
+R9
+R7
+n@seven@segment@display@decoder
+vSubCore
+R0
+R1
+!i10b 1
+!s100 KAVJZb5CGNF=aLPAUi_921
+IeUd1<aM7V1MBAFhQW=Ooc3
+R2
+!s105 SubCore201_sv_unit
+S1
+R3
+w1616300586
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SubCore 1.sv
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SubCore 1.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SubCore 1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/SubCore 1.sv|
+!i113 1
+R6
+R7
+n@sub@core
+vtask2b
+DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+R13
+!i10b 1
+!s100 af=:3C1lW`ikP@DmzI7kn0
+I:Q3b_Yin;zTDB<E42L>4d1
+R11
+!s105 task2b_sv_unit
+S1
+R3
+w1616229710
+8C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/task2b.sv
+FC:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/task2b.sv
+L0 2
+R12
+r1
+!s85 0
+31
+!s108 1616314766.779000
+!s107 C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/task2b.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Mahmoud/Desktop/CPEN311/Lab4/rtl/Lab4_template_de1soc/template_de1soc/task2b.sv|
+!i113 1
+R6
+vtb_Core
+R0
+R14
+!i10b 1
+!s100 mGH7OTj:Lm^d1UmY2B:o[3
+IS`LIQCJ6MFcGDFhLnP33Q0
+R2
+!s105 tb_Core_sv_unit
+S1
+R3
+w1616319692
+8C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_Core.sv
+FC:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_Core.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_Core.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_Core.sv|
+!i113 1
+R6
+R7
+ntb_@core
+vtb_task2b
+R0
+!s110 1616229420
+!i10b 1
+!s100 V@4h8Pn>jEGUJWPbhRJ211
+I5N@KK5@k9<O]D<>IWz5CC1
+R2
+!s105 tb_ksa_sv_unit
+S1
+R3
+w1616229411
+8C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_ksa.sv
+FC:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_ksa.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1616229420.000000
+!s107 C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_ksa.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Mahmoud\Desktop\CPEN311\Lab4\rtl\Lab4_template_de1soc\template_de1soc\tb_ksa.sv|
+!i113 1
+R6
+R7

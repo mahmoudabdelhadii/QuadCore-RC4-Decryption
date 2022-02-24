@@ -1,0 +1,206 @@
+`default_nettype none
+module ksatask2(CLOCK_50, KEY, SW, LEDR, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+
+input                       CLOCK_50;
+
+//////////// LED //////////
+output           [9:0]      LEDR;
+
+//////////// KEY //////////
+input            [3:0]      KEY;
+
+//////////// SW //////////
+input            [9:0]      SW;
+
+//////////// SEG7 //////////
+output           [6:0]      HEX0;
+output           [6:0]      HEX1;
+output           [6:0]      HEX2;
+output           [6:0]      HEX3;
+output           [6:0]      HEX4;
+output           [6:0]      HEX5;
+
+//hex display inputs
+reg [3:0]inHEX0;
+reg [3:0]inHEX1;
+reg [3:0]inHEX2;
+reg [3:0]inHEX3;
+reg [3:0]inHEX4;
+reg [3:0]inHEX5;
+logic reset;
+
+
+//reset
+assign reset = ~KEY[3];
+// Input and output declarations
+logic CLK_50M;
+logic  [9:0] LED;
+assign CLK_50M =  CLOCK_50;
+assign LEDR[9:0] = LED[9:0];
+//Decrypted message RAM
+logic [7:0] data_d, address_d;
+logic wren_d;
+logic [7:0] q_d;
+// Encrypted Message ROM
+logic [7:0] address_m;
+logic [7:0] q_m;
+
+logic [7:0] placeholder;
+logic [7:0] placeholder2;
+
+//Seven Segment 
+SevenSegmentDisplayDecoder U0(HEX0, inHEX0);
+SevenSegmentDisplayDecoder U1(HEX1, inHEX1);
+SevenSegmentDisplayDecoder U2(HEX2, inHEX2);
+SevenSegmentDisplayDecoder U3(HEX3, inHEX3);
+SevenSegmentDisplayDecoder U4(HEX4, inHEX4);
+SevenSegmentDisplayDecoder U5(HEX5, inHEX5);
+//S RAM
+logic [7:0] data, address;
+reg [7:0] i;
+logic wren;
+logic [7:0] q;
+s_memory s_memory_inst(
+	.address(address),
+	.clock(CLOCK_50),
+	.data(data),
+	.wren(wren),
+	.q(q)
+	);
+
+assign inHEX0 = 4'h0;
+assign inHEX1 = 4'h1;
+assign inHEX2 = 4'h2;
+assign inHEX3 = 4'h3;
+assign inHEX4 = 4'h4;
+assign inHEX5 = 4'h5;
+logic [11:0] state;
+logic [23:0] secret_key;
+parameter initial_state = 12'b0000_0000_0000;
+parameter task1_init = 12'b0000_0000_0001;
+parameter task1_increment = 12'b0000_0000_0010;
+parameter task1_increment_interm = 12'b0000_0000_0011;
+parameter task1_done = 12'b0000_0000_0100;
+parameter task2_init = 12'b0000_0000_0101;
+parameter task2_si = 12'b0000_0000_0110;
+parameter task2_secretkey = 12'b0000_0000_0111;
+parameter task2_j1 = 12'b0000_0000_1000;
+parameter task2_j2 = 12'b0000_0000_1001;
+parameter task2_s_j = 12'b0000_0000_1011;
+parameter task2_s_i = 12'b0000_0000_1100;
+parameter task2_swap_step1 = 12'b0000_0000_1101;
+parameter task2_swap_step2 = 12'b0000_0000_1110;
+parameter task2_increment = 12'b0000_0000_1111;
+parameter task2a_done = 12'b0000_0001_0000;
+secret_key[23:10] = 14'b0;
+secret_key[9:0] = SW[9:0];
+
+	always_ff @(posedge CLOCK_50, posedge reset) begin
+	if (reset) begin
+		state <= initial_state;
+		i <= 8'b0;
+	end 
+	else begin
+		case (state)
+			initial_state: begin
+				LED[9:0] <= 10'b0;
+				state <= task1_init;
+			end 
+			
+			task1_init: begin 
+				i <= 8'b0;
+				state <= task1_increment;
+				wren <= 1'b1;
+			end 
+			
+			task1_increment: begin
+				address <= i[7:0];
+				data <= i[7:0];
+				wren <= 1'b1;
+				i <=  i + 8'd1;
+				LED[9:0] <= 10'b1111_0000_00;
+				if (i == 255) begin
+					state <= task1_done;
+				end
+				else begin state <= task1_increment_interm;
+				end
+				end
+				
+				task1_increment_interm: state<= task1_increment;
+				task1_done: begin state <= task2_init;
+										wren <= 1'b0;
+										LED[9:0] <= 10'b1111_0000_00;
+							end
+                task2_init: begin
+					i <= 8'b0;
+					j <= 8'b0;
+					state <= task2_si;
+				end
+                task2_si: begin
+                    address <= i;
+                    placeholder <= i % 3; //[i % 3]
+                    state <=task2_secretkey;
+                end
+
+                task2_secretkey: begin
+                    if begin(placeholder == 2)
+                     placeholder2 <= secret_key[7:0];
+                    end
+                    else if begin (placeholder == 1)
+                    placeholder2 <= secret_key[15:8];
+                    end 
+                    else begin
+                    placeholder2 <= secret_key[23:16];
+                    end
+                    state <=task2_j1;
+                
+                end
+
+                task2_j1: begin
+                    j<= (j+ q + placeholder2);
+                    state <= task2_j2;
+                end
+                task2_j2: begin address <= j;
+                    state <= task2_s_j;
+                end
+                task2_s_j: begin 
+                    placeholder <= q;
+                    address <= i;
+                    state <= task2_s_i;
+                end
+                task2_s_i: begin
+                    placeholder2 <= q;
+                    state <= task2_swap_step1;
+                    wren<=1'b1;
+                end
+                    task2_swap_step1: begin
+                    state <= task2_swap_step2;
+                    wren <= 1'b1;
+                    data <= placeholder;
+                    address <= i;
+                    
+                end
+                task2_swap_step1: begin
+                    wren <=1'b1;
+                    address <= j;
+                    data <= placeholder2;
+                    state <= task2_increment;
+
+                end
+
+                task2_increment: begin 
+                    i<= i + 8'b1;
+                    wren <= 1'b0;
+                    if (i == 255) begin
+                         state <= task2a_done;
+                    end
+                    else begin state <= task2_si;
+                    end
+
+
+				default: state<= initial_state;
+		endcase
+		end
+		end
+endmodule
+
